@@ -29,8 +29,6 @@ async def evaluate_model(request: ModelEvaluationRequest):
     评测指定模型在给定题目上的表现
     """
     try:
-        # 实际项目中，这里会调用模型并进行评测
-        # 这里简单模拟返回评测结果
         responses = []
         for i, question in enumerate(request.questions):
             response = ModelResponse(
@@ -59,8 +57,6 @@ async def get_available_models():
     """
     获取可用于评测的模型列表
     """
-    # 实际项目中，这里会从数据库或配置中获取模型列表
-    # 这里简单模拟返回模型列表
     models = [
         {
             "id": "gpt-3.5-turbo",
@@ -94,8 +90,6 @@ async def get_evaluation_result(evaluation_id: str):
     """
     获取指定评测的结果
     """
-    # 实际项目中，这里会从数据库查询评测结果
-    # 这里简单模拟返回评测结果
     responses = [
         ModelResponse(
             question_id=f"q{i+1}",
