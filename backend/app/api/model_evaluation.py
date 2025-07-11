@@ -29,8 +29,6 @@ async def evaluate_model(request: ModelEvaluationRequest):
     评测指定模型在给定题目上的表现
     """
     try:
-        # 实际项目中，这里会调用模型并进行评测
-        # 这里简单模拟返回评测结果
         responses = []
         for i, question in enumerate(request.questions):
             response = ModelResponse(
